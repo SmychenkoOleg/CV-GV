@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {box-sizing: border-box;}
+
+body {
+  background-color: #c5c5c5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 50px; */
+}
+.main_content {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 20%, 1fr);
+  max-width: 95%;
+  background-color: #f2f2f2;
+  box-shadow: 0 14px 28px #0000007b, 0 10px 10px #0000007b;
+  grid-template-areas:
+    "ps ts"
+    "ps as"
+    "cs as"
+    "cs as"
+    "cs as"
+    "cs ws"
+    "cs es"
+    "cs ss"
+    "cs ls"
+    "fs fs";
+}
+.title{
+  grid-area: ts;}
+.about {
+  grid-area: as;}
+.work {
+  grid-area: ws;}
+.education {
+  grid-area: es;}
+.skills {
+  grid-area: ss;}
+.lang {
+  grid-area: ls;}
+.avatar {
+  grid-area: ps;
+  justify-self: center;
+}
+.contacts {
+  grid-area: cs;
+  justify-self: stretch;
+  padding: 2vh 2vh 0 2vh;
+  background-color: rgb(221, 215, 215);
+}
+.contacts_section {
+  justify-self: center;
+  /* align-self: center; */
+}
+.footer {
+  grid-area: fs;
+  background-color: #c7c6c6;
+ }
+ .footer_section {
+   display: inline-block;
+   text-align: center;
+ }
+  img {
+  object-fit: cover;
+    width: 100%;
+    height: 100%; }
+
+/* Оступы внутри текстовых блоков */
+.title, .about, .work, .education, .skills, .lang {
+  padding: 1vh 4vw;
+}
+
+/* Стили заголовков */
+.h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000; 
+}
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000; 
+}
+.h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a0b6f; 
+}
+.h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #413636;
+  margin: -1em 0;
+}
+.h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b5454;
+}
+.h6 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b5454;
+  margin-top: -1em;
+}
+.h7 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;}
+
+
+/*Стиль текста абзацев*/
+.p_text {
+    text-align: justify;  }
+.p_text1 {
+    text-align: justify;}
+
+
+@media screen and (max-width: 900px) {
+  .main_content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "ts ts"
+      "ps cs"
+      "as as"
+      "ws ws"
+      "es es"
+      "ss ss"
+      "ls ls"
+      "fs fs"
+      ; 
+      /* margin: 5px 5px; */
+    background-color:#ffffff6d;  
+
+  }
+  @media screen and (max-width: 500px) {
+  .main_content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ts"
+      "ps"
+      "as"
+      "ws"
+      "es"
+      "ss"
+      "ls"
+      "cs"
+      "fs"
+      ; 
+    background-color:#ffffff6d;  
+
+  }
+
+  /* .title, .avatar, .about, .work, .education, .skills, .lang, .contacts {
+  } */
+  
+  }
+}
+
