@@ -164,6 +164,9 @@ main{
       margin: 0px 10px 0px 10px;
     background-color:#ffffff6d;  
   }
+  .title{
+    text-align: center;
+  }
   .contacts {
     background-color: #ffffff00;
   }
@@ -192,6 +195,10 @@ main{
     ; 
   background-color:#ffffff6d;  
   }
+.title{
+  text-align: center;
+}
+
 .contacts_section{
   text-align: center;
   }
