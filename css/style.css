@@ -1,28 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('normalize.css');
 
 * {box-sizing: border-box;}
 
 body {
-  background-color: #c5c5c5;
+  background-color: #9fbcc7;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  padding: 30px 5px;
 }
 main{
-  display: flex;
-  justify-content: center;
-  /* padding-bottom: 50px; */
+  display: grid;
+  max-width: 95vw;
+  justify-items: center;
+  margin: 0 auto; 
 }
 .main_content {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(2, 20%, 1fr);
-  max-width: 95%;
+  max-width: 100%;
+
   background-color: #f2f2f2;
   box-shadow: 0 14px 28px #0000007b, 0 10px 10px #0000007b;
   grid-template-areas:
     "ps ts"
     "ps as"
-    "cs as"
+    "ps as"
     "cs as"
     "cs as"
     "cs ws"
@@ -45,16 +49,38 @@ main{
   grid-area: ls;}
 .avatar {
   grid-area: ps;
-  justify-self: center;
+  align-self: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
 }
+.avatar img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* position: relative; */
+    margin: 0 auto;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* margin: 0 auto; */
+    /* top:0;
+    left: 0;
+    position: absolute;
+    z-index: 2; */
+  }
 .contacts {
   grid-area: cs;
-  justify-self: stretch;
-  padding: 2vh 2vh 0 2vh;
-  background-color: rgb(221, 215, 215);
+  display: grid;
+  justify-items: center;
+  /* padding: 2vh 2vh 0 2vh; */
+  background-color: #c7c6c6;
 }
 .contacts_section {
-  justify-self: center;
+  text-align: center;
+  padding: 50px 10px;
+  max-width: 100%;
+  /* margin: 0 auto; */
   /* align-self: center; */
 }
 .footer {
@@ -66,10 +92,7 @@ main{
   text-align: center;
   padding: 10px 20px;
 }
-img {
-  object-fit: cover;
-    width: 100%;
-    height: 100%; }
+
 
 /* Оступы внутри текстовых блоков */
 .title, .about, .work, .education, .skills, .lang {
@@ -110,16 +133,19 @@ img {
   margin-top: -1em;
 }
 .h7 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #000000;}
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
 
 
 /*Стиль текста абзацев*/
 .p_text {
-    text-align: justify;  }
+    text-align: justify;  
+}
 .p_text1 {
-    text-align: justify;}
+    text-align: justify;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -135,27 +161,43 @@ img {
       "ls ls"
       "fs fs"
       ; 
-      /* margin: 5px 5px; */
+      margin: 0px 10px 0px 10px;
     background-color:#ffffff6d;  
+  }
+  .contacts {
+    background-color: #ffffff00;
+  }
+  .contacts_section{
+    text-align: left;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .main_content {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "ts"
-      "ps"
-      "as"
-      "ws"
-      "es"
-      "ss"
-      "ls"
-      "cs"
-      "fs"
-      ; 
-    background-color:#ffffff6d;  
-    }
+@media screen and (max-width: 690px) {
+/* .main{
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+} */
+.main_content {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "ts"
+    "ps"
+    "as"
+    "ws"
+    "es"
+    "ss"
+    "ls"
+    "cs"
+    "fs"
+    ; 
+  background-color:#ffffff6d;  
+  }
+.contacts_section{
+  text-align: center;
+  }
+.contacts{
+  background-color: #ffffff54;
+  }
 }
   /* .title, .avatar, .about, .work, .education, .skills, .lang, .contacts {
   } */
