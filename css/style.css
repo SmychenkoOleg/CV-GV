@@ -35,6 +35,23 @@ main{
     "cs ls"
     "fs fs";
 }
+/* Перемикач мови UA | EN */
+.lang_switch {
+  justify-self: end;
+  margin: 0 10px 10px;
+  font-weight: 700;
+  color: #0a0b6f;
+}
+.lang_switch a {
+  color: #0a0b6f;
+  padding: 4px 6px;
+}
+.lang_switch .lang_current {
+  padding: 4px 6px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
 /* Не даємо блокам сітки розширюватися ширше екрана через довгі слова */
 .main_content > * {
   min-width: 0;
