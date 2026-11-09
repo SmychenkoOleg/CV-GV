@@ -35,6 +35,11 @@ main{
     "cs ls"
     "fs fs";
 }
+/* Не даємо блокам сітки розширюватися ширше екрана через довгі слова */
+.main_content > * {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
 .title{
   grid-area: ts;}
 .about {
@@ -80,6 +85,8 @@ main{
   text-align: center;
   padding: 50px 10px;
   max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
   /* margin: 0 auto; */
   /* align-self: center; */
 }
@@ -205,6 +212,24 @@ main{
 .contacts{
   background-color: #ffffff54;
   }
+}
+
+/* Невеликі телефони: менші заголовки та відступи */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+    padding: 15px 0;
+  }
+  main {
+    max-width: 100%;
+  }
+  .main_content {
+    margin: 0 8px;
+  }
+  .h1 { font-size: 22px; }
+  .h2 { font-size: 20px; }
+  .h3 { font-size: 18px; }
+  .p_text, .p_text1 { text-align: left; }
 }
   /* .title, .avatar, .about, .work, .education, .skills, .lang, .contacts {
   } */
